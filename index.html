@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>購物車試</title>
+    <style>
+        .model {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .shop_box {
+            box-sizing: border-box;
+            width: 250px;
+            height: 400px;
+            text-align: center;
+            margin: 20px;
+            border: 1px solid rgb(150, 226, 252);
+        }
+
+        .shop_box>img {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid -w-80">
+        <div class="model">
+            <div class="shop_box">
+                <img src="photo/AirPods Pro6090.jpg" alt="">
+                <h5>AirPods Pro</h5>
+                <p>NT$ 6090</p>
+                <a class="btn btn-primary" onclick="addToCar('AirPods Pro')" href="">加入購物車</a>
+            </div>
+            <div class="shop_box">
+                <img src="photo/AIWA藍芽接收發射器2800.jpg" alt="">
+                <h5>AIWA藍芽接收發射器</h5>
+                <p>NT$ 2800</p>
+                <a class="btn btn-primary" onclick="addToCar('AIWA藍芽接收發射器')" href="">加入購物車</a>
+            </div>
+            <div class="shop_box">
+                <img src="photo/HyperX Cloud Revolver S3990.jpg" alt="">
+                <h5>HyperX Cloud Revolver S</h5>
+                <p>NT$ 3990</p>
+                <a class="btn btn-primary" onclick="addToCar('HyperX Cloud Revolver S')" href="">加入購物車</a>
+            </div>
+            <div class="shop_box">
+                <img src="photo/realme 智慧手錶1299.jpg" alt="">
+                <h5>realme 智慧手錶</h5>
+                <p>NT$ 1299</p>
+                <a class="btn btn-primary" onclick="addToCar('realme 智慧手錶')" href="">加入購物車</a>
+            </div>
+            <div class="shop_box"></div>
+            <div class="shop_box"></div>
+            <div class="shop_box"></div>
+            <div class="shop_box"></div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+
+    <script>
+        function addToCar(item) {
+            //item為品項名稱，型態為字串
+            if (Cookies.get("carItem") == undefined) {
+                //若目前沒有 carItem 這個 key 的 Cookie ，直接新增一個，並只對購物車頁面設定 Cookie
+                Cookies.set("carItem", item, { path: '/car.html' })
+            }
+            else {
+                //有的話就用逗號將品項做分隔再加入至 carItem 中
+                currentItem = Cookies.get("carItem");
+                currentItem = currentItem + "," + item;
+                Cookies.set("carItem", currentItem, { path: '/car.html' });
+            }
+            alert("已加入" + item + "至購物車");
+        }
+    </script>
+</body>
+
+</html>
