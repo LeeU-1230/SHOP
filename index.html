@@ -7,62 +7,76 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
-    <title>購物車試</title>
-    <style>
-        .model {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .shop_box {
-            box-sizing: border-box;
-            width: 250px;
-            height: 400px;
-            text-align: center;
-            margin: 20px;
-            border: 1px solid rgb(150, 226, 252);
-        }
-
-        .shop_box>img {
-            width: 250px;
-            height: 250px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/home.css">
+    <title>酷鴿商城</title>
 </head>
 
 <body>
     <div class="container-fluid -w-80">
+        <div class="title">
+            <img class="logo_photo" src="https://drive.google.com/uc?export=view&id=1JushJFiW_jOiVxttCCYczLK6DjwgflJ-">
+            <span>酷鴿商城</span>
+        </div>
         <div class="model">
             <div class="shop_box">
-                <img src="photo/AirPods Pro6090.jpg" alt="">
+                <img src="https://drive.google.com/uc?export=view&id=1NJ9fEJ5MYsS7Xhjq1GxJjrYUy0namxqW" alt="">
                 <h5>AirPods Pro</h5>
                 <p>NT$ 6090</p>
-                <a class="btn btn-primary" onclick="addToCar('AirPods Pro')" href="">加入購物車</a>
+                <button class="btn btn-primary" value="AirPods Pro;6090">加入購物車</button>
             </div>
             <div class="shop_box">
-                <img src="photo/AIWA藍芽接收發射器2800.jpg" alt="">
+                <img src="https://drive.google.com/uc?export=view&id=1EiW_e_JQgnhxFSspISnMasfKPJbQjTnP" alt="">
                 <h5>AIWA藍芽接收發射器</h5>
                 <p>NT$ 2800</p>
-                <a class="btn btn-primary" onclick="addToCar('AIWA藍芽接收發射器')" href="">加入購物車</a>
+                <button class="btn btn-primary" value="AIWA藍芽接收發射器;2800">加入購物車</button>
             </div>
             <div class="shop_box">
-                <img src="photo/HyperX Cloud Revolver S3990.jpg" alt="">
+                <img src="https://drive.google.com/uc?export=view&id=1vjxL1ChqNwQNEZKlg3ufqwTAgGalDY7t" alt="">
                 <h5>HyperX Cloud Revolver S</h5>
                 <p>NT$ 3990</p>
-                <a class="btn btn-primary" onclick="addToCar('HyperX Cloud Revolver S')" href="">加入購物車</a>
+                <button class="btn btn-primary" value="HyperX Cloud Revolver S;3990">加入購物車</button>
             </div>
             <div class="shop_box">
-                <img src="photo/realme 智慧手錶1299.jpg" alt="">
+                <img src="https://drive.google.com/uc?export=view&id=1dgWBx4eBFzjmtXiBH4fcOutnzuTwtbra" alt="">
                 <h5>realme 智慧手錶</h5>
                 <p>NT$ 1299</p>
-                <a class="btn btn-primary" onclick="addToCar('realme 智慧手錶')" href="">加入購物車</a>
+                <button class="buy btn btn-primary" value="realme 智慧手錶;1299">加入購物車</button>
             </div>
-            <div class="shop_box"></div>
-            <div class="shop_box"></div>
-            <div class="shop_box"></div>
-            <div class="shop_box"></div>
+            <div class="shop_box">
+                <img src="https://drive.google.com/uc?export=view&id=11Ivl-lcn2KHCcZBDRIr6KejDT-XjpPWL" alt="">
+                <h5>SONY WF-H800 真無線藍牙耳機【黑】</h5>
+                <p>NT$ 5899</p>
+                <button class="buy btn btn-primary" value="SONY WF-H800 真無線藍牙耳機【黑】;5899">加入購物車</button>
+            </div>
+            <div class="shop_box">
+                <img src="https://drive.google.com/uc?export=view&id=1eJiIF2TTE6OHI4sqGqr5w04MxpLgazUS" alt="">
+                <h5>TicWatch S2 探索運動智慧手錶-黑色</h5>
+                <p>NT$ 6290</p>
+                <button class="buy btn btn-primary" value="'TicWatch S2 探索運動智慧手錶-黑色;6290">加入購物車</button>
+            </div>
+            <div class="shop_box">
+                <img src="https://drive.google.com/uc?export=view&id=1jVq_8oafTfaI4feKczp5d23P6lOhCmg8" alt="">
+                <h5>小米手環 5</h5>
+                <p>NT$ 945</p>
+                <button class="buy btn btn-primary" value="小米手環 5;945">加入購物車</button>
+            </div>
+            <div class="shop_box">
+                <img src="https://drive.google.com/uc?export=view&id=1A7UlbOJNTg_gpmSL7RQw8VpKSE42izaj" alt="">
+                <h5>羅技 G PRO Wireless 電競滑鼠</h5>
+                <p>NT$ 3990</p>
+                <button class="buy btn btn-primary" value="羅技 G PRO Wireless 電競滑鼠;3990">加入購物車</button>
+            </div>
+            <div class="shop_box">
+                <img src="https://drive.google.com/uc?export=view&id=17kyJPjdqt_1cIUGQwwn6LLhlpKfOm31-" alt="">
+                <h5>Garmin Forerunner 45 GPS腕式光學心率跑錶</h5>
+                <p>NT$ 6290</p>
+                <button class="buy btn btn-primary" value="Garmin Forerunner 45 GPS腕式光學心率跑錶;6290">加入購物車</button>
+            </div>
+        </div>
+        <div id="checked">
             <a class="btn btn-primary" href="car.html">前往結帳</a>
         </div>
+
     </div>
 
 
@@ -76,22 +90,8 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 
-    <script>
-        function addToCar(item) {
-            //item為品項名稱，型態為字串
-            if (Cookies.get("carItem") == undefined) {
-                //若目前沒有 carItem 這個 key 的 Cookie ，直接新增一個，並只對購物車頁面設定 Cookie
-                Cookies.set("carItem", item, { path: 'https://leeu-1230.github.io/shop/car.html' })
-            }
-            else {
-                //有的話就用逗號將品項做分隔再加入至 carItem 中
-                currentItem = Cookies.get("carItem");
-                currentItem = currentItem + "," + item;
-                Cookies.set("carItem", currentItem, { path: 'https://leeu-1230.github.io/shop/car.html' });
-            }
-            alert("已加入" + item + "至購物車");
-        }
-    </script>
+    <script src="scripts/home.js"></script>
+
 </body>
 
 </html>

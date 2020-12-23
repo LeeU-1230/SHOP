@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/rest.css">
+        <link rel="stylesheet" href="../styles/COD.css">
+
+</head>
+
+<body>
+    <div class="user_info">
+        <div class="information">
+            <img class="logo_photo" src="https://drive.google.com/uc?export=view&id=1JushJFiW_jOiVxttCCYczLK6DjwgflJ-">
+            <span>信用卡付款</span>
+        </div>
+        <form>
+            <div class="info">
+                <span>本次消費總計</span>
+                <span class="price_info">NT$ </span>
+            </div>
+            <hr>
+            <div class="buyer">
+                <span>付款資訊</span>
+                <ul>
+                    <li id="name">姓名&ensp;<input class="buyer_name" type="text" size="10" maxlength="10" value="路易小明"></li>
+                    <li id="mobile">手機&ensp;<input class="buyer_mobile" type="text" size="15" maxlength="15" value="0912****52"></li>
+                    <li id="card_no">信用卡卡號&ensp;
+                        <input id="CardNum" type="text" size="19" maxlength="19" value="****-****-****-****">
+                    </li>
+                    <li id="multi_area">
+                        <span>有效期限&ensp;
+                            <select id="multi_ThruMonth">
+                                <option>12</option>
+                            </select>
+                            <select id="multi_Year">
+                                <option>2026</option>
+                            </select>
+                        </span>&ensp;
+                        <span>卡片背面3碼&ensp;
+                            <input id="multi_CW2Num" type="text" size="3" maxlength="3" value="101">
+                        </span>
+                    </li>
+                    <li id="address">發票地址&ensp;
+                        <span id="BuyerAddrEdit">
+                            <select id="BuyerAddrCity">
+                                <option>台南市</option>
+                            </select>
+                            <select id="BuyerAddrRegion">
+                                <option>安平區</option>
+                            </select>
+                            <input id="BuyerAddr" type="text" size="35" value="安倍路三段1995號">
+                        </span>
+                    </li>
+                    <li>
+                        <label>
+                            <input id="RecvAd" type="checkbox" checked>&ensp;願意收到商品特惠通知
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="invoice">
+                <span>發票</span>
+                <div class="invoice_item">
+                    <label>
+                        <input type="radio" name="invoice" checked>&ensp;個人電子發票&emsp;&emsp;
+                    </label>
+                    <label>
+                        <input type="radio" name="invoice">&ensp;捐贈發票&emsp;&emsp;
+                    </label>
+                    <label>
+                        <input type="radio" name="invoice">&ensp;公司戶電子發票&emsp;&emsp;
+                    </label>
+                </div>
+                <div class="invoice_msg">
+                    <p>中獎會主動掛號寄出</p>
+                    <p>依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票</p>
+                </div>
+            </div>
+            <hr>
+            <div class="receiver">
+                <span>收貨人</span>
+                <ul>
+                    <li  class="receiver_name">姓名&ensp;<input type="text" size="10" maxlength="10" value="路易小明"></li>
+                    <li class="receiver_mobile">手機&ensp;<input type="text" size="15" maxlength="15" value="0912****52"></li>
+                    <li  class="receiver_Addr" >收件地址&ensp;
+                        <span id="receiverAddrEdit">
+                            <select id="receiverAddrCity">
+                                <option>台南市</option>
+                            </select>
+                            <select id="receiverAddrRegion">
+                                <option>安平區</option>
+                            </select>
+                            <input id="receiverAddr" type="text" size="35" value="安倍路三段1995號">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="normal_check">
+                <label>
+                    <input id="check_agree" type="checkbox" checked>&ensp;我已詳閱並同意
+                    <a href="#">酷鴿商城 電子商務約定條款</a>
+                </label>
+                <span>
+                    <button id="btnSubmit" class="btn btn-success" type="button" data-toggle="modal"
+                        data-target="#myModal">確定送出</button>
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">酷鴿商城提醒</h4>
+                                </div>
+                                <div class="modal-body">
+                                    付款成功！ 我們會立即處理訂單，商品會儘速送達！
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </form>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/paymate.js"></script>
+
+</body>
+
+</html>

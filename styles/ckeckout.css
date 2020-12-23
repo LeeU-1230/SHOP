@@ -1,0 +1,124 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.prod_subtotal::before, .prod_price::before, .shipping_price::before, .total_price::before {
+    content: 'NT$ ';
+}
+
+.layout_center {
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: fantasy, 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+    border: 2px brown solid;
+    padding: 5px;
+}
+
+.information, .prod, .market, .pay, .total {
+    width: 100%;
+}
+
+.information>span {
+    font-weight: bolder;
+    font-size: 40px;
+    letter-spacing: 10px;
+}
+
+.information>img {
+    vertical-align: middle;
+}
+
+.logo_photo {
+    width: 120px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.prod-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px ghostwhite solid;
+}
+
+.prod_name, .name {
+    width: 360px;
+    padding: 10px;
+}
+
+.prod_price, .prod_qty, .prod_subtotal, .price, .qty, .subtotal {
+    width: 120px;
+    padding: 10px;
+}
+
+.prod_cancel, .cancel {
+    width: 80px;
+    padding: 10px;
+}
+
+.box>span {
+    background-color: antiquewhite;
+    font-weight: bold;
+}
+
+.total {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.total>div {
+    display: inline-block;
+    width: 380px;
+    text-align: center;
+    padding: 20px;
+}
+
+.market>span {
+    background-color: antiquewhite;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+}
+
+.market>form {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+label {
+    padding: 10px 0;
+}
+
+.pay>span {
+    background-color: antiquewhite;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.payment {
+    display: flex;
+    padding: 10px;
+}
+
+.creditcard, .COD, .ATM, .IBO {
+    width: 200px;
+    text-align: center;
+}
+
+.a_creditcard, .a_COD, .a_ATM, .a_IBO {
+    padding: 5px;
+    border: 2px lightskyblue solid;
+    border-radius: 10%;
+    background-color: lime;
+    color: rgb(71, 46, 46);
+}
+
+a:hover {
+    background-color: lightskyblue;
+}

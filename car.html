@@ -1,27 +1,77 @@
 <!DOCTYPE html>
+
 <head>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/rest.css">
+    <link rel="stylesheet" href="styles/ckeckout.css">
     <title>我的購物車</title>
 </head>
+
 <body>
-    <ul></ul>
-    <script>
-        //若 Cookies 中沒有 carItem 這個 key ，提醒使用者快去買東西!!
-        if(Cookies.get("carItem") == undefined){
-            let element = document.createElement("p");
-            element.innerText = "購物車內沒有物品喔!趕快去選購"
-            document.querySelector("ul").appendChild(element);
-        }
-        else{
-            //藉由split方法將逗號切開來，即可把品項一個一個列出來
-            let items = Cookies.get("carItem");
-            items = items.split(",");
-            for(let item of items){
-                let element = document.createElement("li");
-                element.innerText = item;
-                document.querySelector("ul").appendChild(element);
-            }
-        }
-    </script>
+    <div class="layout_center">
+        <div class="information">
+            <img class="logo_photo" src="https://drive.google.com/uc?export=view&id=1JushJFiW_jOiVxttCCYczLK6DjwgflJ-">
+            <span>訂單資訊</span>
+        </div>
+        <div class="prod">
+            <div class="box">
+                <span class="name">商品名稱</span>
+                <span class="price">單價</span>
+                <span class="qty">數量</span>
+                <span class="subtotal">金額</span>
+                <span class="cancel">-</span>
+            </div>
+            <div class="prod-list">
+                <ul>
+                </ul>
+            </div>
+            <hr>
+            <div class="total">
+                <div>
+                    <span class="shipping">運費</span>&emsp;
+                    <span class="shipping_price">80</span>
+                </div>
+                <div>
+                    <span class="total_msg">總金額</span>&emsp;
+                    <span class="total_price">390</span>
+                </div>
+            </div>
+        </div>
+        <div class="market">
+            <span>配送方式</span>&emsp;
+            <form id="way_item">
+                <label>
+                    <input type="radio" name="pickupway" value="80" checked>&ensp;宅配到府&emsp;&emsp;
+                </label>
+                <label>
+                    <input type="radio" name="pickupway" value="80">&ensp;7-11超商取貨&emsp;&emsp;
+                </label>
+                <label>
+                    <input type="radio" name="pickupway" value="80">&ensp;全家超商取貨&emsp;&emsp;
+                </label>
+                <label>
+                    <input type="radio" name="pickupway" value="80">&ensp;郵局取貨
+                </label>
+            </form>
+        </div>
+        <hr>
+        <div class="pay">
+            <span>付款方式</span>
+            <ul class="payment">
+                <li class="creditcard"><a class="a_creditcard" href="htmls/creditcard.html" rel="prev">信用卡</a></li>
+                <li class="COD"><a class="a_COD" href="htmls/COD.html" rel="prev">貨到付款</a></li>
+                <li class="ATM"><a class="a_ATM" href="htmls/ATM.html" rel="prev">ATM轉帳</a></li>
+                <li class="IBO"><a class="a_IBO" href="htmls/ibon.html" rel="prev">ibon付款</a></li>
+            </ul>
+        </div>
+        <hr>
+
+    </div>
+
+    <script src="scripts/car.js"></script>
+
 </body>
+
 </html>

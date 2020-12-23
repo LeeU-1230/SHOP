@@ -1,0 +1,65 @@
+.user_info{
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: fantasy,'Microsoft YaHei',Arial, Helvetica, sans-serif;
+    border: 2px brown solid;
+    padding: 5px;
+}
+.information > span{
+    font-weight: bolder;
+    font-size: 35px;
+    letter-spacing: 10px;
+}
+.information > img{
+    vertical-align: middle;
+}
+.logo_photo{
+    width: 100px;
+}
+
+.info, .buyer, .invoice, .receiver, .normal_check{
+    width: 100%;
+}
+
+.info{
+    text-align: center;
+    font-size: 25px;
+}
+.buyer{
+    background-color: rgb(255, 255, 253);
+}
+.buyer >span, .invoice >span, .receiver >span{
+    background-color: antiquewhite;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+}
+#name, #mobile, #card_no, #multi_area, .receiver_name, .receiver_mobile{
+    display: inline-block;
+    width: 380px;
+}
+ul,li{
+    padding: 10px;
+}
+.invoice_item, .invoice_msg{
+    padding: 10px;
+    padding-left: 20px;
+}
+.invoice_msg{
+    font-size: 14px;
+    line-height:2;
+    color: chocolate;
+}
+.normal_check >label,.normal_check >span{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+label{
+    padding: 10px 0;
+}
+
+
+
